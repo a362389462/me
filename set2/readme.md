@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+# For this week, I mean I learn a lot. First of all, I can use list right now, and my debug ability have increased. And I know how to use str(), str.,and range.

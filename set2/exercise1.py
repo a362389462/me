@@ -11,18 +11,18 @@ import platform
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
-some_words = ['what', 'does', 'this', 'line', 'do', '?']
+some_words = ['what', 'does', 'this', 'line', 'do', '?'] # I think this is creating a set with all of these words
 
-for word in some_words:
-    print(word)
+for word in some_words: # I think this one is for making all of these words individually
+    print(word) # Print these words one by one
 
-for x in some_words:
-    print(x)
+for x in some_words: # I think this is same as before
+    print(x) # Print it out
 
-print(some_words)
+print(some_words) # Print the final result
 
-if len(some_words) > 3:
-    print('some_words contains more than 3 words')
+if len(some_words) > 3: # Set a if means if it does, it will runs. In here it means if there is more than 3 words in some_words, it will run
+    print('some_words contains more than 3 words') # Print it out
 
 def usefulFunction():
     """
