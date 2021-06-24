@@ -1,1 +1,3 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+I tried so many method to fix my guesssing game, but still something wrong with that count time things, I cannot fix that this time. If I can fix that, I will got that 31/31 and the little sheep, I am sooooooooooooooooo upset, I think I will try to contact Ben after Week 4's tut, to fix that!
+And the loop things I can handle them right now!!!!!!!! It is interesting that from the bottom to right now in programming.

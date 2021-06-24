@@ -25,35 +25,56 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-
     print("Hello! Welcome to the guessing game!")
-    print("We gonna gusee a number here! ")
-    print("Let's just put a smallest number in this guessing range first!")
-    lowerBound = input("Enter a number here to be the smallest you think: ")
+    print("A number between _ and _ ?")
 
-    upperBound = input("Enter a number here to be the biggest you think: ")
+    low_set_up = False
 
-    print(" Are you ready? A number between 0 and {}?".format(upperBound))
+    while not low_set_up:
+      lowerBound = input("Enter a lower bound: ")
+      try:
+        lowerBound = int(lowerBound)
+        print(f"A number between {lowerBound} and _ ?")
+        low_set_up = True
+      except:
+        print(f"{lowerBound} isn't a number... We need a number!")
 
-    upperBound = int(upperBound)
+    high_set_up = False
+    while not high_set_up:
+      upperBound = input("Enter an upper bound: ")
+      try:
+        upperBound = int(upperBound)
+        if lowerBound < upperBound:
+          print(f"OK then, a number between {lowerBound} and {upperBound} ?")
+          high_set_up = True
+        elif lowerBound > upperBound:
+          print(f"{upperBound} is smaller than {lowerBound}\nWe need a number larger than {lowerBound}")
+        elif lowerBound == upperBound:
+          print(f"{upperBound} is the same as {lowerBound}\nWe need a number larger than {lowerBound}")
+      except:
+        print(f"{upperBound} isn't a number... We need a number!")
 
-    true_age = random.randint(0,upperBound)
+    true_num = random.randint(lowerBound, upperBound)
 
     guessed = False
 
     while not guessed:
-      num = int(input("Guess a number: "))
-      if num == true_age:
-        print("Yes it is!")
-        guessed = True
-      elif num < true_age - 5:
-        print("You guessed too small! try again!")
-      elif num > true_age + 5:
-        print("You guessed too big! try again!")
-      elif true_age - 5 <= num <= true_age + 5:
-        print("Close! very close! You almost there!")
-
-
+      try:
+        num = int(input("Guess a number: "))
+        print("You guessed {},".format(num))
+        if num == true_num:
+          print("Yes it is!It was {}".format(true_num))
+          guessed = True
+        elif num < true_num:
+          print("You guessed too small! try again!")
+          if num < lowerBound:
+            print("smaller than lowerbound? CrAzY?")
+        elif num > true_num:
+          print("You guessed too big! try again!")
+          if num > upperBound:
+            print("Bigger than upperbound? CrAzY?")
+      except:
+        print("{} thats not a number!!!! Give me a number!!!".format(num))
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
