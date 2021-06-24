@@ -1,3 +1,8 @@
+0
+
+
+
+
 """Set 3, Exercise 2.
 
 An example of how a guessing game might be written.

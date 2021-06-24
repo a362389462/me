@@ -26,6 +26,34 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
+    print("Hello! Welcome to the guessing game!")
+    print("We gonna gusee a number here! ")
+    print("Let's just put a smallest number in this guessing range first!")
+    lowerBound = input("Enter a number here to be the smallest you think: ")
+
+    upperBound = input("Enter a number here to be the biggest you think: ")
+
+    print(" Are you ready? A number between 0 and {}?".format(upperBound))
+
+    upperBound = int(upperBound)
+
+    true_age = random.randint(0,upperBound)
+
+    guessed = False
+
+    while not guessed:
+      num = int(input("Guess a number: "))
+      if num == true_age:
+        print("Yes it is!")
+        guessed = True
+      elif num < true_age - 5:
+        print("You guessed too small! try again!")
+      elif num > true_age + 5:
+        print("You guessed too big! try again!")
+      elif true_age - 5 <= num <= true_age + 5:
+        print("Close! very close! You almost there!")
+
+
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
